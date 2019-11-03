@@ -21,6 +21,6 @@ optional arguments:
                         Directory to download content to
 ```
 
-The URL can be the url of a single episode / film (e.g. `https://www.raiplay.it/video/2019/10/Aspettando-VivaRaiPlay-Ep-1-14b79f55-1c75-44ab-b861-281615b94636.htmll`), or a whole series (e.g. `https://www.raiplay.it/programmi/vivaraiplay`), in which case all seasons / episodes will be downloaded. Downloaded content will be organised in folders based on the content's show name and seasons.
+The URL can be the url of a single episode / film (e.g. `https://www.raiplay.it/video/2019/10/Aspettando-VivaRaiPlay-Ep-1-14b79f55-1c75-44ab-b861-281615b94636.html`), or a whole series (e.g. `https://www.raiplay.it/programmi/vivaraiplay`), in which case all seasons / episodes will be downloaded. Downloaded content will be organised in folders based on the content's show name and seasons.
 
 Although (free) registration to RaiPlay is required to watch content on the platform, you can grab the required URLs for download without making an account, nor `raiplay-dl` requires authentication details to download.
