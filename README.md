@@ -1,6 +1,8 @@
+# raiplay-dl
+
 Python downloader for the Italian streaming platform [RaiPlay](https://www.raiplay.it/)
 
-# Installation / Requirements
+## Installation / Requirements
 
 `pip install -r requirements.txt`
 
