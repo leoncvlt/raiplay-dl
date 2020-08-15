@@ -56,7 +56,7 @@ def download_title(url, download_dir):
   video_url = data['video']['content_url']
   video_title = data['episode_title'] or data['name']
 
-  video_filename = Path(f"{download_dir}/{data['name']}/{data['season'].replace('/', '-')}/{video_title.replace('/', '-')}.mp4")
+  video_filename = Path(f"{download_dir}/{data['name'].rstrip()}/{data['season'].replace('/', '-')}/{video_title.replace('/', '-')}.mp4")
   if (not video_filename.parent.is_dir()):
     os.makedirs(video_filename.parent)
 
