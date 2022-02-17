@@ -54,9 +54,11 @@ def download_title(url, download_dir):
   data = json.loads(content_url.read().decode())
   # print(json.dumps(data, indent=4))
   video_url = data['video']['content_url']
-  video_title = data['episode_title'] or data['name']
+  video_title = data['episode_title'].replace('[^A-Za-z0-9\'àèéìòùÈ]+', '-') or data['name'].replace('[^A-Za-z0-9\'àèéìòùÈ]+', '-')
+  import re
+  data['name'] = re.sub('[^A-Za-z0-9\'àèéìòùÈ]+',' ', data['name'])
 
-  video_filename = Path(f"{download_dir}/{data['name'].rstrip()}/{data['season'].replace('/', '-')}/{video_title.replace('/', '-')}.mp4")
+  video_filename = Path(f"{download_dir}/{data['name'].replace('[^A-Za-z0-9àèéìòùÈ]+', ' ').rstrip()}/{data['season'].replace('[^A-Za-z0-9àèéìòùÈ]+', ' ')}/{video_title.replace('[^A-Za-z0-9àèéìòùÈ]+', ' ')}.mp4")
   if (not video_filename.parent.is_dir()):
     os.makedirs(video_filename.parent)
 
